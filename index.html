@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Enfield Reviews - JavaScript Edition</title>
+    <meta name="description" content="Detaljne recenzije Royal Enfield motora">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Preskoči na glavni sadržaj</a>
+    
+    <header id="header">
+        <h1>Royal Enfield Reviews</h1>
+        <nav class="nav-menu">
+            <ul>
+                <li><button class="nav-btn active" data-target="home-page">Home</button></li>
+                <li><button class="nav-btn" data-target="katalog-page">Katalog Recenzija</button></li>
+                <li><button class="nav-btn" data-target="kontakt-page">Kontakt</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="home-page" class="view-section">
+            <div class="hero">
+                <img src="img/Royal-Enfield-Emblem.jpg" alt="Royal Enfield logo" class="hero-logo">
+                <h2>Otkrijte moć Royal Enfielda</h2>
+                <p>Detaljne recenzije najpopularnijih modela pokretane JavaScript dinamičkom arhitekturom.</p>
+                <button class="btn-primary" onclick="document.querySelector('[data-target=katalog-page]').click()">Otvori katalog</button>
+            </div>
+        </section>
+
+        <section id="katalog-page" class="view-section hidden">
+            <h2>Istraži Recenzije Motocikala</h2>
+            
+            <div class="controls-bar">
+                <input type="text" id="search-input" placeholder="Upiši naziv motora (npr. Interceptor)..." aria-label="Pretraži motore">
+                
+                <select id="category-filter" aria-label="Filtriraj po kategoriji">
+                    <option value="all">Sve kategorije</option>
+                    <option value="starter">Starter motori (350cc)</option>
+                    <option value="sport-touring">Sport Touring (650cc)</option>
+                    <option value="adventure">Adventure</option>
+                </select>
+                
+                <label class="fav-checkbox-label">
+                    <input type="checkbox" id="favorites-filter"> ⭐ Samo Moji Favoriti
+                </label>
+            </div>
+
+            <div id="loading-state" class="hidden">🔄 Učitavanje baze podataka motocikala...</div>
+            <div id="error-state" class="hidden">❌ Pogreška pri učitavanju JSON podataka. Provjerite Live Server!</div>
+            <div id="empty-state" class="hidden">ℹ️ Nema pronađenih motocikala za unesene filtre. Pokušajte ponovno.</div>
+
+            <div id="motori-container" class="categories-grid"></div>
+        </section>
+
+        <section id="kontakt-page" class="view-section hidden">
+            <h2>Kontakt</h2>
+            <form id="contact-form" novalidate class="main-form">
+                <div class="form-group">
+                    <label for="name">Ime i prezime:</label>
+                    <input type="text" id="name" required minlength="3">
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Predmet:</label>
+                    <select id="subject" required>
+                        <option value="">-- Odaberite --</option>
+                        <option value="pitanje">Pitanje o motoru</option>
+                        <option value="review">Prijedlog za review</option>
+                        <option value="suradnja">Suradnja</option>
+                    </select>
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Poruka:</label>
+                    <textarea id="message" rows="5" required minlength="10"></textarea>
+                    <span class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Pošalji</button>
+            </form>
+            <div id="form-success" class="hidden" role="alert"></div>
+        </section>
+    </main>
+
+    <dialog id="details-modal" aria-labelledby="modal-title">
+        <div class="modal-header">
+            <h2 id="modal-title">Naziv Motora</h2>
+            <button id="close-modal" aria-label="Zatvori recenziju">X</button>
+        </div>
+        <div id="modal-content">
+            </div>
+    </dialog>
+
+    <footer>
+        <p>&copy; 2026 Royal Enfield Reviews. Sve slike su vlasništvo Royal Enfielda.</p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

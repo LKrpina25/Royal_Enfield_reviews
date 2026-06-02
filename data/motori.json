@@ -1,0 +1,130 @@
+[
+  {
+    "id": "hunter-350",
+    "naziv": "Royal Enfield Hunter 350",
+    "kategorija": "starter",
+    "opis": "Hunter 350 je moderna reimaginacija klasičnog cruiser stila. Jednostavna, pouzdana i pristupačna za sve. Izuzetno upravljiv u gradskim sredinama.",
+    "slika": "img/royal-enfield-hunter-350-motorcycle-500x500.webp",
+    "specifikacije": {
+      "motor": "349cc, jednocilindarski, 4-taktni",
+      "snaga": "20.2 KS @ 6000 RPM",
+      "moment": "27 Nm @ 4000 RPM",
+      "cijena": "~530.000 kn",
+      "dodatno": "Visina sjedala: 790 mm"
+    },
+    "prednosti": [
+      "Odličan za početnike",
+      "Niska potrošnja goriva",
+      "Dobra pouzdanost",
+      "Lagan i upravljiv"
+    ],
+    "mane": [
+      "Manja snaga za brže vožnje",
+      "Bazična oprema",
+      "Nije idealan za dugačke putovanje"
+    ]
+  },
+  {
+    "id": "meteor-350",
+    "naziv": "Royal Enfield Meteor 350",
+    "kategorija": "starter",
+    "opis": "Meteor 350 je elegantna i komforna cruiser opcija s više stilskog utjecaja. Savršen za rekreativne i opuštene vožnje.",
+    "slika": "img/Royal enfield meteor 350.avif",
+    "specifikacije": {
+      "motor": "349cc, jednocilindarski, 4-taktni",
+      "snaga": "20.2 KS @ 6000 RPM",
+      "moment": "27 Nm @ 4000 RPM",
+      "cijena": "~550.000 kn",
+      "dodatno": "Klasičan cruiser položaj sjedenja"
+    },
+    "prednosti": [
+      "Veći komfort od Huntera",
+      "Bolji sjedni položaj",
+      "Lagan i upravljiv",
+      "Dobar dizajn"
+    ],
+    "mane": [
+      "Malo skupiji od Huntera",
+      "Sličan motor kao Hunter",
+      "Nije za ozbiljne off-road avanture"
+    ]
+  },
+  {
+    "id": "interceptor-650",
+    "naziv": "Royal Enfield Interceptor 650",
+    "kategorija": "sport-touring",
+    "opis": "Interceptor 650 je retro classic motocikl s bogatom poviješću. Moderne performanse u klasičnom paketu — savršen za ljubitelje vintage stila.",
+    "slika": "img/royal-enfield-interceptor-650.avif",
+    "specifikacije": {
+      "motor": "648cc, dvocilindarski, 4-taktni",
+      "snaga": "47.3 KS @ 7250 RPM",
+      "moment": "52 Nm @ 5550 RPM",
+      "cijena": "~850.000 kn",
+      "dodatno": "Kultni paralelni dvocilindraš"
+    },
+    "prednosti": [
+      "Klasičan, ikoniski dizajn",
+      "Moćna i dinamična vožnja",
+      "Odličan za curving i spirale",
+      "Povoljne cijene rezervnih dijelova"
+    ],
+    "mane": [
+      "Manje komforan od Super Meteora",
+      "Manji prostor za prtljagu",
+      "Skupiji od starter motora"
+    ]
+  },
+  {
+    "id": "super-meteor-650",
+    "naziv": "Royal Enfield Super Meteor 650",
+    "kategorija": "sport-touring",
+    "opis": "Super Meteor 650 donosi autentični retro cruiser stil s moćnim dvocilindarskim motorom, stvoren za krstarenje otvorenim cestama i maksimalan komfor.",
+    "slika": "img/Royal-Enfield-Super-Meteor-650-1-.jpg",
+    "specifikacije": {
+      "motor": "648cc, dvocilindarski, 4-taktni",
+      "snaga": "47 KS @ 7250 RPM",
+      "moment": "52.3 Nm @ 5650 RPM",
+      "cijena": "~920.000 kn",
+      "dodatno": "Premium završna obrada i Showa ovjes"
+    },
+    "prednosti": [
+      "Izvrsna stabilnost na autocesti",
+      "Vrhunski cruiser komfor",
+      "Kvalitetna završna obrada",
+      "Moćan zvuk i odziv"
+    ],
+    "mane": [
+      "Težak za gradske gužve",
+      "Tvrđi stražnji ovjes",
+      "Skupiji od starter motora"
+    ]
+  },
+  {
+    "id": "himalayan-450",
+    "naziv": "Royal Enfield Himalayan 450",
+    "kategorija": "adventure",
+    "opis": "Himalayan 450 je namjenski adventure motocikl dizajniran za terensku vožnju i duge putovanje. Robustan, pouzdana i sposoban — odličan izbor za avanturiste.",
+    "slika": "img/RE_Himalayan_450.jpg",
+    "specifikacije": {
+      "motor": "452cc, jednocilindarski, 4-taktni",
+      "snaga": "40 KS @ 6500 RPM",
+      "moment": "40 Nm @ 4250 RPM",
+      "cijena": "~750.000 kn",
+      "dodatno": "Visina sjedala: 800 mm (prilagodljivo)"
+    },
+    "prednosti": [
+      "Izvrstan za off-road vožnju",
+      "Veliki prostor za prtljagu",
+      "Odličan za duge putovanje",
+      "Visokie sjedalo za bolji pregled",
+      "Dobra potrošnja goriva za svoju klasu",
+      "Jednostavno održavanje"
+    ],
+    "mane": [
+      "Teži od manjih modela",
+      "Viši centar gravitacije — izazov za početnike na terenu",
+      "Skupiji od starter motora",
+      "Nije idealan za urbanu vožnju"
+    ]
+  }
+]
