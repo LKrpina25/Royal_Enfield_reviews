@@ -60,6 +60,18 @@ export function inicijalizirajEvente() {
         });
     });
 
+    const skipLink = document.querySelector('.skip-link');
+    if (skipLink) {
+        skipLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            prebaciStranicu('katalog-page');
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) {
+                searchInput.focus();
+            }
+        });
+    }
+
     // Filtar: Unos teksta (Pretraga)
     document.getElementById('search-input').addEventListener('input', (e) => {
         state.filteri.search = e.target.value;
