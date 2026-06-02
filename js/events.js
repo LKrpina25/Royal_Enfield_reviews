@@ -2,7 +2,58 @@ import { state, toggleFavorite } from './state.js';
 import { renderKatalog, otvoriModal, prebaciStranicu } from './ui.js';
 
 export function inicijalizirajEvente() {
-    // SPA Navigacija kroz tabove
+    // --- JS HAMBURGER LOGIKA ---
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('menu'); // Tvoj originalni ID 'menu'
+
+    if (hamburgerBtn && navMenu) {
+        // Prvo osigurajmo da JS postavi početno stanje ovisno o ekranu
+        if (window.innerWidth <= 768) {
+            navMenu.style.display = 'none';
+        }
+
+        hamburgerBtn.addEventListener('click', () => {
+            console.log("JS Hamburger je uspješno kliknut!"); // Ovo ćeš vidjeti u F12 konzoli
+
+            // Izravna JS provjera i manipulacija stilom u hodu
+            if (navMenu.style.display === 'none' || navMenu.style.display === '') {
+                navMenu.style.display = 'block';
+                hamburgerBtn.textContent = '✕'; // Promijeni ikonu u X kad je otvoreno
+                console.log("JS je otvorio izbornik.");
+            } else {
+                navMenu.style.display = 'none';
+                hamburgerBtn.textContent = '☰'; // Vrati u tri crtice kad se zatvori
+                console.log("JS je zatvorio izbornik.");
+            }
+        });
+
+        // Kada se klikne bilo koji link unutar izbornika na mobitelu, JS ga odmah zatvara
+        document.querySelectorAll('.nav-btn').forEach(gumb => {
+            gumb.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navMenu.style.display = 'none';
+                    hamburgerBtn.textContent = '☰';
+                    console.log("JS je zatvorio izbornik nakon odabira stranice.");
+                }
+            });
+        });
+
+        // Ako korisnik rasteže prozor na računalu, JS vraća izbornik natrag
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navMenu.style.display = 'block';
+            } else {
+                if (hamburgerBtn.textContent === '☰') {
+                    navMenu.style.display = 'none';
+                }
+            }
+        });
+    } else {
+        console.error("Greška: JS ne može pronaći gumb (#hamburger-btn) ili izbornik (#menu) u HTML-u!");
+    }
+    // --- KRAJ JS HAMBURGER LOGIKE ---
+
+    // Navigacija kroz tabove (SPA)
     document.querySelectorAll('.nav-btn').forEach(gumb => {
         gumb.addEventListener('click', (e) => {
             prebaciStranicu(e.target.dataset.target);
